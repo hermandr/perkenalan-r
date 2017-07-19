@@ -1,7 +1,7 @@
 --- 
 title_meta  : Bab 2
 title       : Vektor
-description : "Pada kursus R gratis ini, kita akan berjalan-jalan ke Las Vegas. Anda akan belajar cara menganalisis hasil taruhan menggunakan vektor di R! Setelah menyelesaikan bab ini, Anda bisa membuat vektor di R, menamai vektor, memilih elemen-elemen vektor, serta membandingkan beberapa vektor."
+description : "Pada kursus R gratis ini, kita akan berjalan-jalan ke Vegas. Anda akan belajar cara menganalisis hasil taruhan menggunakan vektor di R! Setelah menyelesaikan bab ini, Anda bisa membuat vektor di R, menamai vektor, memilih elemen-elemen vektor, serta membandingkan beberapa vektor."
 
 --- type:NormalExercise xp:100 skills:1 key:d9b453dbdd
 ## Membuat vektor
@@ -38,8 +38,8 @@ vegas <- "Go!"
 
 *** =sct
 ```{r}
-test_object("vegas", incorrect_msg = "Make sure that you assign the correct value to `vegas`. Do not forget that R is case sensitive!")
-success_msg("Great! Head over to the next exercise.")
+test_object("vegas", incorrect_msg = "Pastikan Anda menetapkan nilai yang benar pada `vegas`. Jangan lupa kalau R itu peka huruf!")
+success_msg("Bagus! Lanjutkan ke latihan berikutnya.")
 ```
 
 
@@ -90,12 +90,12 @@ boolean_vector <- c(TRUE, FALSE, TRUE)
 
 *** =sct
 ```{r}
-msg <- "Do not change the code that defined `numeric_vector` and `character_vector`!"
+msg <- "Jangan ganti kode yang mendefinisikan `numeric_vector` dan `character_vector`!"
 test_object("numeric_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("character_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("boolean_vector",
-            incorrect_msg = "Make sure that you assign the correct values to `boolean_vector`. Use `c(TRUE, FALSE, TRUE)`. Don't place quotes around `TRUE` and `FALSE`! Also, make sure to adopt the same order as listed in the instructions.")
-success_msg("Perfect! Notice that adding a space behind the commas in the `c()` function improves the readability of your code. Let's practice some more with vector creation in the next exercise.")
+            incorrect_msg = "Pastikan Anda menetapkan nilai yang benar pada `boolean_vector`. Gunakan `c(TRUE, FALSE, TRUE)`. Jangan gunakan tanda kutip untuk mengapit `TRUE` dan` FALSE`! Pastikan juga Anda menggunakan urutan yang sama seperti instruksi.")
+success_msg("Sempurna! Perhatikan bahwa penambahan spasi di belakang koma dalam fungsi `c()` memudahkan kode Anda dibaca. Ayo latihan lagi dengan membuat vektor berikutnya.")
 ```
 
 
@@ -151,10 +151,10 @@ roulette_vector <- c(-24, -50, 100, -350, 10)
 *** =sct
 ```{r}
 test_object("poker_vector",
-            incorrect_msg = "Make sure that you assign the correct values to `poker_vector`.")
+            incorrect_msg = "Pastikan Anda menetapkan nilai yang benar pada `poker_vector`.")
 test_object("roulette_vector",
-            incorrect_msg = "Make sure that you assign the correct values to `roulette_vector`. Make sure to adopt the correct order!")
-success_msg("Very good! To check out the contents of your vectors, remember that you can always simply type the variable in the console and hit Enter. Proceed to the next exercise!")
+            incorrect_msg = "Pastikan Anda menetapkan nilai yang benar pada`roulette_vector`. Pastikan urutannya sudah benar!")
+success_msg("Bagus sekali! Untuk memeriksa konten vektor, Anda dapat mengetikkan variabel itu di konsol lalu tekan Enter. Lanjutkan ke latihan berikutnya!")
 ```
 
 
@@ -217,16 +217,16 @@ names(roulette_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Frida
 *** =sct
 ```{r}
 test_object("poker_vector",
-            incorrect_msg = "Do not change the values inside `poker_vector`; they were already coded for you.")
+            incorrect_msg = "Jangan ganti nilai-nilai di dalam `poker_vector` karena sudah dikodekan untuk Anda.")
 test_object("roulette_vector",
-            incorrect_msg = "Do not change the values inside `roulette_vector`; they were already coded for you.")
+            incorrect_msg = "Jangan ganti nilai-nilai di dalam `roulette_vector` karena sudah dikodekan untuk Anda.")
 test_object("poker_vector",
             eq_condition = "equal",
-            incorrect_msg = "Do not change the code that names the elements in `poker_vector`; focus on `roulette_vector`!")
+            incorrect_msg = "Jangan ganti kode yang menamai elemennya pada `poker_vector`; fokuskan pada `roulette_vector`!")
 test_object("roulette_vector",
             eq_condition = "equal",
-            incorrect_msg = "Make sure that you assign the correct names vector to `roulette_vector`. Use the exact same vector as the one that was used to name `poker_vector`.")
-success_msg("Well done! Continue to the next exercise.")
+            incorrect_msg = "Pastikan Anda menetapkan nama vektor yang benar pada `roulette_vector`. Gunakan vektor yang sama persis dengan yang digunakan untuk menamai `poker_vector`.")
+success_msg("Selamat! Lanjutkan ke latihan berikutnya.")
 ```
 
 
@@ -285,18 +285,18 @@ names(roulette_vector) <- days_vector
 
 *** =sct
 ```{r}
-msg <- "Do not changes the predefined variables `poker_vector`, `roulette_vector` or `days_vector`."
+msg <- "Jangan ganti variabel yang telah ditentukan ini: `poker_vector`, `roulette_vector`, dan `days_vector`."
 test_object("poker_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("poker_vector",
             eq_condition = "equal",
-            incorrect_msg = "Make sure that you assign `days_vector` to the names of `poker_vector`.")
+            incorrect_msg = "Pastikan Anda menetapkan `days_vector` pada nama-nama `poker_vector`.")
 test_object("roulette_vector",
             eq_condition = "equal",
-            incorrect_msg = "Make sure that you assign `days_vector` to the names of `roulette_vector`.")
-success_msg("Nice one! A word of advice: try to avoid code duplication at all times. Continue to the next exercise and learn how to do arithmetic with vectors!")
+            incorrect_msg = "Pastikan Anda menetapkan `days_vector` pada nama-nama `roulette_vector`.")
+success_msg("Bagus sekali! Saran untuk Anda: cobalah menghindari duplikasi kode. Lanjutkan latihan berikutnya dan pelajari cara melakukan aritmetika dengan vektor!")
 ```
 
 
@@ -367,12 +367,12 @@ total_vector
 
 *** =sct
 ```{r}
-msg <- "Do not change the contents of `A_vector` or `B_vector`!"
+msg <- "Jangan ganti konten `A_vector` atau `B_vector`!"
 test_object("A_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("B_vector", undefined_msg = msg, incorrect_msg = msg)
-test_object("total_vector", incorrect_msg = "Make sure that `total_vector` contains the sum of `A_vector` and `B_vector`.")
-test_output_contains("total_vector", incorrect_msg = "Don't forget to print out `total_vector`! Simply write `total_vector` on a new line.")
-success_msg("Good job! Continue to the next exercise.")
+test_object("total_vector", incorrect_msg = "Pastikan `total_vector` berisi hasil penjumlahan` A_vector` dan `B_vector`.")
+test_output_contains("total_vector", incorrect_msg = "Jangan lupa untuk mencetak `total_vector`! Cukup tulis `total_vector` pada baris baru.")
+success_msg("Bagus!  Lanjutkan ke latihan berikutnya.")
 ```
 
 
@@ -422,14 +422,14 @@ total_daily <- poker_vector + roulette_vector
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = "Jangan ganti apa pun tentang definisi dan penamaan `poker_vector` dan `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("total_daily", incorrect_msg = "Make sure that you assign the sum of `poker_vector` and `roulette_vector` to `total_daily`.")
+test_object("total_daily", incorrect_msg = "Pastikan Anda menetapkan hasil penjumlahan `poker_vector` dan` roulette_vector` pada `total_daily`.")
 
-success_msg("Great! Continue to the next exercise.")
+success_msg("Bagus! Lanjutkan ke latihan berikutnya.")
 ```
 
 
@@ -503,19 +503,19 @@ total_week
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = "Jangan ganti apa pun tentang definisi dan penamaan `poker_vector` dan `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("total_poker", 
-            incorrect_msg = "Make sure that you assign to `total_poker` the sum of the `poker_vector`.")
+            incorrect_msg = "Pastikan Anda menetapkan penjumlahan `poker_vector` pada `total_poker`.")
 test_object("total_roulette",
-            incorrect_msg = "Make sure that you assign to `total_roulette` the sum of the `roulette_vector`.")
+            incorrect_msg = "Pastikan Anda menetapkan penjumlahan `roulette_vector` pada `total_roulette`.")
 test_object("total_week",
-            incorrect_msg = "Make sure that you assign to `total_week` the sum of the other two total vectors: `total_roulette` and `total_poker`.")
+            incorrect_msg = "Pastikan Anda menetapkan total penjumlahan vektor `total_roulette` dan `total_poker` pada `total_week`.")
 
-test_output_contains("total_week", incorrect_msg = "Don't forget to write `total_week` on a new line to print out the variable.")
-success_msg("Well done. This is pretty bad news...")
+test_output_contains("total_week", incorrect_msg = "Jangan lupa untuk menulis `total_week` pada baris baru untuk mencetak variabel itu.")
+success_msg("Selamat. Ini benar-benar kabar jelek...")
 ```
 
 
@@ -575,18 +575,18 @@ total_poker > total_roulette
 
 *** =sct
 ```{r}
-msg <- "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = "Jangan ganti apa pun tentang definisi dan penamaan `poker_vector` dan `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
 test_object("total_poker", 
-            incorrect_msg = "Make sure that you assign to `total_poker` the sum of the `poker_vector`. Use `sum()`.")
+            incorrect_msg = "Pastikan Anda menetapkan penjumlahan `poker_vector` pada `total_poker`. Gunakan `sum()`.")
 test_object("total_roulette",
-            incorrect_msg = "Make sure that you assign to `total_roulette` the sum of the `roulette_vector`. Use `sum()`.")
+            incorrect_msg = "Pastikan Anda menetapkan penjumlahan `roulette_vector` pada `total_roulette`. Gunakan `sum()`.")
 test_output_contains("total_poker > total_roulette",
-                     incorrect_msg = "Have you correctly carried out the comparison? To check if `total_poker` is greater than `total_roulette`, you can use `total_poker > total_roulette`.")
-success_msg("Good job! Continue to the next exercise.")
+                     incorrect_msg = "Sudahkah Anda melakukan perbandingan dengan benar? Untuk mencari tahu jika `total_poker` lebih besar daripada `total_roulette`, Anda dapat menggunakan `total_poker > total_roulette`.")
+success_msg("Bagus! Lanjutkan ke latihan berikutnya.")
 ```
 
 
@@ -638,14 +638,14 @@ poker_wednesday <- poker_vector[3]
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = "Jangan ganti apa pun tentang definisi dan penamaan `poker_vector` dan `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_wednesday", 
-            undefined_msg = "Please make sure to define a variable `poker_wednesday`.",
-            incorrect_msg = "It looks like `poker_wednesday` does not contain the correct value of the `poker_vector`.")
-success_msg("Great! R also makes it possible to select multiple elements from a vector at once. Learn how in the next exercise!")
+            undefined_msg = "Pastikan Anda mendefinisikan variabel `poker_wednesday`.",
+            incorrect_msg = "Sepertinya `poker_wednesday` tidak berisi nilai yang benar dari `poker_vector`.")
+success_msg("Bagus! R juga memungkinkan Anda memilih banyak elemen sekaligus dari vektor. Pelajari caranya di latihan berikutnya!")
 ```
 
 
@@ -699,13 +699,13 @@ poker_midweek <- poker_vector[c(2, 3, 4)]
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = "Jangan ganti apa pun tentang definisi dan penamaan `poker_vector` dan `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_midweek", 
-            incorrect_msg = "It looks like `poker_midweek` does not contain the correct values from `poker_vector`. You can use the vector `c(2, 3, 4)` inside square brackets.")
-success_msg("Well done! Continue to the next exercise to specialize in vector selection some more!");
+            incorrect_msg = "Sepertinya `poker_midweek` tidak berisi nilai yang benar dari `poker_vector`. Anda dapat menggunakan vector `c(2, 3, 4)` dalam kurung siku.")
+success_msg("Selamat! Lanjutkan ke latihan berikutnya agar Anda lebih mahir dalam seleksi vektor!");
 ```
 
 
@@ -751,14 +751,14 @@ roulette_selection_vector <- roulette_vector[2:5]
 *** =sct
 
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = "Jangan ganti apa pun tentang definisi dan penamaan `poker_vector` dan `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_selection_vector", 
-            undefined_msg = "Please make sure to define a variable `roulette_selection_vector`.",
-            incorrect_msg = "It looks like `roulette_selection_vector` does not contain the correct selection from `roulette_vector`. Make sure to to use the right indexes.")
-success_msg("Awesome! The colon operator is extremely useful and very often used in R programming, so remember it well. Proceed to the next exercise.")
+            undefined_msg = "Pastikan Anda mendefinisikan variabel `roulette_selection_vector`.",
+            incorrect_msg = "Sepertinya `roulette_selection_vector` tidak berisi seleksi yang benar dari `roulette_vector`. Pastikan indeks yang Anda pakai sudah tepat.")
+success_msg("Luar biasa! Operator titik dua sangat bermanfaat dan sangat sering dipakai dalam pemrograman R. Jadi, ingat baik-baik, ya. Lanjutkan ke latihan berikutnya.")
 ```
 
 
@@ -826,14 +826,14 @@ mean(poker_start)
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = "Jangan ganti apa pun tentang definisi dan penamaan `poker_vector` dan `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_start", 
-            incorrect_msg = "It looks like `poker_start` does not contain the first three values of `poker_vector`. You can use `c(\"Monday\", \"Tuesday\", \"Wednesday\")` inside square brackets to do this.")
-test_output_contains("mean(poker_start)", incorrect_msg = "Have you correctly calculated the average of the values in `poker_start` and printed it out? Use `mean(poker_start)`.")
-success_msg("Good job! Apart from subsetting vectors by index or by name, you can also subset vectors by comparison. The next exercises will show you how!");
+            incorrect_msg = "Sepertinya `poker_start` tidak berisi tiga nilai pertama dari `poker_vector`. Anda dapat memakai `c(\"Monday\", \"Tuesday\", \"Wednesday\")` dalam kurung siku untuk hal ini.")
+test_output_contains("mean(poker_start)", incorrect_msg = "Sudahkah Anda menghitung rata-rata nilai dalam `poker_start` dengan benar dan mencetaknya? Gunakan `mean(poker_start)`. ")
+Success_msg ("Bagus! Selain menjabarkan vektor menurut indeks atau nama, Anda juga bisa membuat subset vektor dengan perbandingan. Latihan selanjutnya akan memberi tahu caranya!");
 ```
 
 
@@ -906,14 +906,14 @@ selection_vector
 
 *** =sct
 ```{r}
-msg <- "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg <- "Jangan ganti apa pun tentang definisi dan penamaan `poker_vector` dan `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 
-test_object("selection_vector", incorrect_msg = "It looks like `selection_vector` does not contain the correct result. Remember that R uses element wise operations for vectors.")
-test_output_contains("selection_vector", incorrect_msg = "Don't forget to print out `selection_vector` by writing the variable name on a new line.")
-success_msg("Great!")
+test_object("selection_vector", incorrect_msg = "Sepertinya `selection_vector` tidak berisi hasil yang benar. Ingat: R menggunakan operasi elemen untuk vektor.")
+test_output_contains("selection_vector", incorrect_msg = "Jangan lupa untuk mencetak `selection_vector` dengan menuliskan nama variabel itu pada baris baru.")
+success_msg("Hebat!")
 ```
 
 
@@ -977,14 +977,14 @@ poker_winning_days <- poker_vector[selection_vector]
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = "Jangan ganti apa pun tentang definisi dan penamaan `poker_vector` dan `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
-test_object("selection_vector", incorrect_msg = "Don't change the way `selection_vector` is calculated.")
+test_object("selection_vector", incorrect_msg = "Jangan mengganti cara perhitungan `selection_vector`.")
 test_object("poker_winning_days",
-            incorrect_msg =  "It looks like `poker_winning_days` does not contain the correct result. Use `poker_vector[selection_vector]`.")
-success_msg("Good job! Continue to the next exercise.")
+            incorrect_msg =  "Sepertinya `poker_winning_days` tidak berisi hasil yang benar. Gunakan `poker_vector[selection_vector]`.")
+success_msg("Bagus! Lanjutkan ke latihan berikutnya.")
 ```
 
 
@@ -1039,16 +1039,16 @@ roulette_winning_days <- roulette_vector[selection_vector]
 
 *** =sct
 ```{r}
-msg = "Do not change anything about the definition and naming of `poker_vector` and `roulette_vector`."
+msg = "Jangan ganti apa pun tentang definisi dan penamaan `poker_vector` dan `roulette_vector`."
 test_object("days_vector", undefined_msg = msg, incorrect_msg = msg)
 test_object("poker_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("roulette_vector", eq_condition = "equal", undefined_msg = msg, incorrect_msg = msg)
 test_object("selection_vector", 
-            incorrect_msg = "It looks like `selection_vector` does not contain the correct result. Use `roulette_vector > 0`.")
+            incorrect_msg = "Sepertinya `selection_vector` tidak berisi hasil yang benar. Gunakan `roulette_vector > 0`.")
 test_object("roulette_winning_days",
-            incorrect_msg = "It looks like `roulette_winning_days` does not contain the correct result. Use `roulette_vector[selection_vector]`.")
+            incorrect_msg = "Sepertinya `roulette_winning_days` tidak berisi hasil yang benar. Gunakan `roulette_vector[selection_vector]`.")
 
-success_msg("Great! This exercise concludes the chapter on vectors. The next chapter will introduce you to the two-dimensional version of vectors: matrices.")
+success_msg("Hebat! Latihan ini menyimpulkan bab mengenai vektor. Bab berikutnya akan memperkenalkan Anda pada vektor dua dimensi, atau dikenal dengan matriks.")
 ```
 
 
