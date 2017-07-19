@@ -1,6 +1,6 @@
 --- 
 title_meta  : Bab 1
-title       : Pengenalan dasar
+title       : Pengenalan dasar-dasar
 description : "Pada bab ini, Anda akan menjalankan langkah-langkah pertama dengan R. Anda akan belajar cara memakai konsol sebagai kalkulator dan juga cara menetapkan variabel. Anda juga akan mengenal tipe-tipe data dasar di R. Ayo kita mulai!"
 
 --- type:NormalExercise xp:100 skills:1 key:15d729634a
@@ -44,14 +44,14 @@ Cukup tambahkan sebaris kode R yang menghitung 6 tambah 12, sama seperti contoh 
 
 *** =sct
 ```{r}
-test_output_contains("18", incorrect_msg = "Make sure to add `6 + 12` on a new line. Do not start the line with a `#`, otherwise your R code is not executed!")
-success_msg("Awesome! See how the console shows the result of the R code you submitted? Now that you're familiar with the interface, let's get down to R business!")
+test_output_contains("18", incorrect_msg = "Pastikan Anda menambahkan `6 + 12` pada baris baru. Jangan awali baris dengan `#`, atau kode R tidak akan dieksekusi!")
+success_msg("Luar biasa! Lihat bagaimana konsol menunjukkan hasil kode R yang Anda kirimkan? Setelah terbiasa dengan antarmukanya, kita akan mengupas R secara mendalam!")
 ```
 
 --- type:NormalExercise xp:100 skills:1 key:720745eda5
 ## Aritmetika dengan R
 
-Dalam bentuknya yang paling dasar, R dapat dipakai sebagai kalkulator sederhana. Coba lihat operator aritmetika di bawah ini:
+Dalam bentuknya yang paling dasar, R bisa dipakai sebagai kalkulator sederhana. Coba lihat operator aritmetika di bawah ini:
 
 - Penjumlahan: `+`
 - Pengurangan: `-`
@@ -125,10 +125,10 @@ Contoh lain dari operator modulus: `9 %% 2` = `1`.
 
 *** =sct
 ```{r}
-msg = "Do not remove the other arithmetic examples!"
-test_output_contains("2^5", incorrect_msg = "The exponentiation example is not correct. Write `2 ^ 5` on a new line.")
-test_output_contains("28 %% 6", incorrect_msg = "There seems to be an issue with the modulo example. Write `28 %% 6` on a new line.")
-success_msg("Great! Head over to the next exercise.")
+msg = "Jangan hapus contoh aritmetika lainnya!"
+test_output_contains("2^5", incorrect_msg = "Contoh pemangkatan kurang tepat. Tulis `2 ^ 5` di baris baru.")
+test_output_contains("28 %% 6", incorrect_msg = "Sepertinya ada masalah dengan contoh modulus. Tuliskan `28 %% 6` pada baris baru.")
+success_msg("Bagus! Ayo ke latihan berikutnya.")
 ```
 
 
@@ -137,9 +137,9 @@ success_msg("Great! Head over to the next exercise.")
 
 Konsep dasar dalam pemrograman (statistik) disebut **variabel**.
 
-Berkat variabel, Anda dapat menyimpan nilai (mis. 4) atau objek (mis. deskripsi fungsi) di R. Nantinya, nama variabel ini dapat dipakai untuk kemudahan mengakses nilai atau objek yang telah tersimpan di dalamnya.
+Berkat variabel, Anda bisa menyimpan nilai (mis. 4) atau objek (mis. deskripsi fungsi) di R. Nantinya, nama variabel ini bisa dipakai untuk kemudahan mengakses nilai atau objek yang telah tersimpan di dalamnya.
 
-Anda dapat menetapkan nilai 4 pada variabel `my_var` dengan perintah:
+Anda bisa menetapkan nilai 4 pada variabel `my_var` dengan perintah:
 
 ```
 my_var <- 4
@@ -176,9 +176,9 @@ x
 
 *** =sct
 ```{r}
-test_object("x", undefined_msg = "Make sure to define a variable `x`.",
-            incorrect_msg = "Make sure that you assign the correct value to `x`.") 
-success_msg("Good job! Have you noticed that R does not print the value of a variable to the console when you did the assignment? `x <- 42` did not generate any output, because R assumes that you will be needing this variable in the future. Otherwise you wouldn't have stored the value in a variable in the first place, right? Proceed to the next exercise!")
+test_object("x", undefined_msg = "Pastikan variable `x` didefinisikan.",
+            incorrect_msg = "Pastikan Anda menetapkan nilai yang benar untuk `x`.") 
+success_msg("Bagus! Apakah Anda memperhatikan bahwa R tidak mencetak nilai variabel ke konsol saat Anda menetapkan nilai? `X <- 42` tidak menghasilkan output apa pun karena R menganggap Anda akan membutuhkan variabel ini nantinya. Jika tidak, Anda tidak akan menyimpan nilainya terlebih dahulu ke dalam variabel, bukan? Lanjutkan ke latihan berikutnya!")
 ```
 
 
@@ -221,17 +221,17 @@ my_apples
 *** =sct
 ```{r}
 test_object("my_apples", 
-            undefined_msg = "Please make sure to define a variable `my_apples`.",
-            incorrect_msg = "Make sure that you assign the correct value to `my_apples`.")
-test_output_contains("my_apples", incorrect_msg = "Have you explicitly told R to print out the `my_apples` variable to the console?")
-success_msg("Great! Continue to the next exercise!")
+            undefined_msg = "Pastikan variable `my_apples` didefinisikan.",
+            incorrect_msg = "Pastikan Anda menetapkan nilai yang benar untuk `my_apples`.")
+test_output_contains("my_apples", incorrect_msg = "Sudahkah Anda secara eksplisit memberi tahu R untuk mencetak variabel `my_apples` ke konsol?")
+success_msg("Bagus! Lanjutkan ke latihan berikutnya!")
 ```
 
 
 --- type:NormalExercise xp:100 skills:1 key:1c1bd25045
 ## Penetapan variabel (3)
 
-Setiap keranjang buah yang lezat ini harus menampung buah jeruk. Anda akan menambahkan enam buah jeruk. Sebagai analis data, Anda segera membuat variabel baru:`my_oranges`, dan memberikan nilai 6 ke dalamnya. Selanjutnya, Anda ingin menghitung total buah yang ada. Karena semua nilai ini telah diberi nama yang bermakna, Anda kini dapat mengodekannya dengan cara yang jelas:
+Setiap keranjang buah yang lezat ini harus menampung buah jeruk. Anda akan menambahkan enam buah jeruk. Sebagai analis data, Anda segera membuat variabel baru:`my_oranges`, dan memberikan nilai 6 ke dalamnya. Selanjutnya, Anda ingin menghitung total buah yang ada. Karena semua nilai ini telah diberi nama yang bermakna, Anda kini bisa mengodekannya dengan cara yang jelas:
 
 ```
 my_apples + my_oranges
@@ -243,7 +243,7 @@ my_apples + my_oranges
 - Menetapkan hasil penjumlahan `my_apples` dan` my_oranges` pada sebuah variabel baru: `my_fruit`.
 
 *** =hint
-`My_fruit` hanyalah jumlah` my_apples` dan `my_oranges`. Anda dapat memakai operator `+` untuk menjumlahkan keduanya dan operator `<-` untuk menetapkan nilai tersebut pada variabel` my_fruit`.
+`My_fruit` hanyalah jumlah` my_apples` dan `my_oranges`. Anda bisa memakai operator `+` untuk menjumlahkan keduanya dan operator `<-` untuk menetapkan nilai tersebut pada variabel` my_fruit`.
 
 *** =pre_exercise_code
 ```{r}
@@ -278,13 +278,13 @@ my_fruit <- my_apples + my_oranges
 
 *** =sct
 ```{r}
-test_object("my_apples", incorrect_msg = "Keep the line that assigns 5 to `my_apples`.")
-test_object("my_oranges", incorrect_msg = "Keep the line that assigns 6 to `my_oranges`.")
+test_object("my_apples", incorrect_msg = "Biarkan baris yang menetapkan 5 pada `my_apples`.")
+test_object("my_oranges", incorrect_msg = "Biarkan baris yang menetapkan 6 pada `my_oranges`.")
 test_output_contains("my_apples + my_oranges",
-                     incorrect_msg = "Make sure to print out the result of adding `my_apples` and `my_oranges`. The code example in the description already gives away the answer to this instruction!")
-msg <- "Have you used `my_fruit <- my_apples + my_oranges` to create the `my_fruit` variable?"
+                     incorrect_msg = "Pastikan Anda mencetak hasil penjumlahan `my_apples` dan` my_oranges`. Contoh kode di dalam deskripsi sudah menyediakan jawaban untuk instruksi ini!")
+msg <- "Sudahkah Anda memakai `my_fruit <- my_apples + my_oranges` untuk membuat variabel `my_fruit`?"
 test_object("my_fruit", undefined_msg = msg, incorrect_msg = msg)
-success_msg("Nice one! The great advantage of doing calculations with variables is reusability. If you just change `my_apples` to equal 12 instead of 5 and rerun the script, `my_fruit` will automatically update as well. Continue to the next exercise.")
+success_msg("Bagus sekali! Manfaat besar melakukan perhitungan dengan variabel adalah bisa dipakai berulang-ulang. Jika Anda hanya mengganti `my_apples` menjadi 12 bukan 5 lalu menjalankan kembali skripnya,` my_fruit` akan diperbarui secara otomatis. Lanjutkan ke latihan berikutnya.")
 ```
 
 
@@ -333,12 +333,12 @@ my_fruit
 
 *** =sct
 ```{r}
-test_error(incorrect_msg = "You can do this by setting the `my_oranges` variable to a numeric value, not a string!")
-test_object("my_apples", incorrect_msg = "Make sure that `my_apples` still contains `5`.")
-test_object("my_oranges", incorrect_msg = "Make sure that `my_oranges` is equal to `6`.")
-test_object("my_fruit", incorrect_msg = "The value of `my_fruit` is not correct. It should be 11, the sum of `my_apples` and `my_oranges`.")
-test_output_contains("my_fruit", incorrect_msg = "Don't remove the line that prints out `my_fruit`.")
-success_msg("Awesome, keep up the good work! Continue to the next exercise.")
+test_error(incorrect_msg = "Anda bisa melakukan ini dengan menetapkan variabel `my_oranges` ke nilai numerik, bukan string!")
+test_object("my_apples", incorrect_msg = "Pastikan bahwa `my_apples` masih berisi `5`.")
+test_object("my_oranges", incorrect_msg = "Pastikan bahwa `my_oranges` sama dengan `6`.")
+test_object("my_fruit", incorrect_msg = "Nilai `my_fruit` tidak benar. Nilainya harusnya 11, yaitu jumlah `my_apples` dan `my_oranges`.")
+test_output_contains("my_fruit", incorrect_msg = "Jangan hapus baris yang mencetak `my_fruit`.")
+success_msg("Bagus, teruskan bekerja dengan baik! Lanjutkan ke latihan berikutnya.")
 ```
 
 
@@ -398,10 +398,10 @@ my_logical <- FALSE
 
 *** =sct
 ```{r}
-test_object("my_numeric", incorrect_msg = "Have you correctly changed the declaration of `my_numeric` so it contains the value 42?")
-test_object("my_character", incorrect_msg = "Have you correctly changed `my_character` to `\"universe\"`? Don't forget the quotes!")
-test_object("my_logical", incorrect_msg = "Have you correctly changed `my_logical` to `FALSE`? All letters of `FALSE` should be capitalized!")
-success_msg("Great work! Continue to the next exercise.")
+test_object("my_numeric", incorrect_msg = "Sudahkah Anda mengganti deklarasi `my_numeric` dengan benar sehingga berisi nilai 42?")
+test_object("my_character", incorrect_msg = "Sudahkah Anda mengganti `my_character` ke `\"universe\"`? Jangan lupa tanda petiknya!")
+test_object("my_logical", incorrect_msg = "Sudahkah Anda mengganti `my_logical` ke `FALSE` dengan benar? `FALSE` harus ditulis dengan huruf besar!")
+success_msg("Bagus! Lanjutkan ke latihan berikutnya.")
 ```
 
 
@@ -457,16 +457,16 @@ class(my_logical)
 
 *** =sct
 ```{r}
-msg <- "Do not change the declaration of the variables!"
+msg <- "Jangan ganti deklarasi variabelnya!"
 lapply(c("my_numeric", "my_character", "my_logical"), test_object, undefined_msg = msg, incorrect_msg = msg)
-patt <- "Have you included `class(%1$s)` to print out the data type of `%1$s`?"
+patt <- "Sudahkah Anda menyertakan `class(%1$s)` untuk mencetak tipe data `%1$s`?"
 test_output_contains("class(my_numeric)",
-                     incorrect_msg = "Do not remove the code that prints out the type of `my_numeric`.")
+                     incorrect_msg = "Jangan hapus kode yang mencetak tipe `my_numeric`.")
 test_output_contains("class(my_character)",
                      incorrect_msg = sprintf(patt, "my_character"))
 test_output_contains("class(my_logical)",
                      incorrect_msg = sprintf(patt, "my_logical"))
-success_msg("Congratulations! This was the last exercise for this chapter. Head over to the next chapter to get immersed in the world of vectors!")
+success_msg("Selamat! Ini adalah latihan terakhir pada bab ini. Lanjutkan ke bab berikutnya. Bersiaplah masuk ke dunia vektor!")
 ```
 
 
