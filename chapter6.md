@@ -1,0 +1,424 @@
+--- 
+title_meta  : Bab 6
+title       : List
+description : Berlawanan dengan vektor, list dapat menampung komponen-komponen tipenya berbeda, mirip seperti daftar tugas di rumah atau di kantor. Bab ini akan mengajari Anda cara membuat, menamai, dan mengolah subset daftar.
+
+--- type:NormalExercise xp:100 skills:1 key:2afcdb6a76ec91bf266de9b2ac295d844d7bb004
+## Mengapa daftar diperlukan?
+
+Selamat! Sampai sini, Anda sudah memahami hal-hal berikut di dalam kursus ini:
+
+- **Vektor** (larik satu dimensi): dapat menampung nilai numerik, karakter, atau logis. Seluruh elemen di dalam vektor memiliki tipe data yang sama.
+- **Matriks** (larik dua dimensi): dapat menampung nilai numerik, karakter, atau logis. Seluruh elemen di dalam matriks memiliki tipe data yang sama.
+- **Frame data** (objek dua dimensi): dapat menampung nilai numerik, karakter, atau logis. Seluruh elemen di dalam kolom memiliki tipe data yang sama, tetapi kolom-kolom yang berbeda dapat memiliki tipe-tipe data yang berbeda pula.
+
+Lumayan untuk seorang pemula R, kan? ;-)
+
+*** =instructions
+Klik 'Kirim Jawaban' untuk mulai belajar segala hal tentang daftar!
+
+*** =hint
+Cukup klik tombol 'Kirim Jawaban'.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Just click the 'Submit Answer' button.
+```
+
+*** =solution
+```{r}
+# Just click the 'Submit Answer' button.
+```
+
+*** =sct
+```{r}
+success_msg("Siap, sedia, mulai! Lanjutkan ke latihan berikutnya.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:68f93c5c504616bd18876da52cd123277d56fc8b
+## Mengapa daftar diperlukan? (2)
+
+**Daftar** di R mirip dengan daftar tugas di kantor atau sekolah; sejumlah item dalam daftar kemungkinan besar memiliki perbedaan dalam durasi, karakteristik, jenis kegiatan yang harus selesai, dan sebagainya.
+
+Pada daftar, Anda dapat mengumpulkan berbagai objek menjadi satu nama (yaitu, nama daftar) secara berurutan. Objek bisa berupa matriks, vektor, frame data, daftar lain, dan seterusnya. Seluruh objek ini bahkan tidak harus terkait satu sama lain dengan cara apa pun.
+
+Bisa disimpulkan bahwa daftar adalah sejenis tipe data super; hampir semua informasi dapat ditampung di dalamnya!
+
+*** =instructions
+Klik 'Kirim Jawaban' untuk memulai latihan pertama tentang daftar.
+
+*** =hint
+Klik 'Kirim Jawaban' untuk memulai latihan pertama tentang daftar.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Click 'Submit Answer' to start the first exercise on lists.
+```
+
+*** =solution
+```{r}
+# Click 'Submit Answer' to start the first exercise on lists.
+```
+
+*** =sct
+```{r}
+success_msg("Keren. Sekarang saatnya mengutak-atik!")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:4beee9cb532c889903218b49b83ab5ef133eac83
+## Membuat daftar
+
+Saatnya membangun daftar pertama! Gunakan fungsi [`list()`](http://www.rdocumentation.org/packages/base/functions/list) untuk membuat daftar:
+
+```
+my_list <- list(comp1, comp2 ...)
+```
+
+Argumen-argumen pada daftar fungsi merupakan daftar komponen. Ingat, komponen bisa berupa matriks, vektor, daftar lainnya, dan sebagainya.
+
+*** =instructions
+Buatlah sebuah daftar bernama `my_list` berisi variabel `my_vector`, `my_matrix`, dan` my_df` sebagai komponennya.
+
+*** =hint
+Gunakan fungsi [`list()`](http://www.rdocumentation.org/packages/base/functions/list)  dengan `my_vector`, `my_matrix`, dan `my_df` sebagai argumen-argumen yang dipisahkan dengan koma.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Vector with numerics from 1 up to 10
+my_vector <- 1:10 
+
+# Matrix with numerics from 1 up to 9
+my_matrix <- matrix(1:9, ncol = 3)
+
+# First 10 elements of the built-in data frame mtcars
+my_df <- mtcars[1:10,]
+
+# Construct list with these different elements:
+my_list <- 
+```
+
+*** =solution
+```{r}
+# Vector with numerics from 1 up to 10
+my_vector <- 1:10 
+
+# Matrix with numerics from 1 up to 9
+my_matrix <- matrix(1:9, ncol = 3)
+
+# First 10 elements of the built-in data frame mtcars
+my_df <- mtcars[1:10,]
+
+# Construct list with these different elements:
+my_list <- list(my_vector, my_matrix, my_df)
+```
+
+*** =sct
+```{r}
+msg = "Jangan menghapus atau mengganti definisi variabel `my_vector`, `my_matrix`, atau `my_df`!"
+test_object("my_vector", undefined_msg = msg, incorrect_msg = msg)
+test_object("my_matrix", undefined_msg = msg, incorrect_msg = msg)
+test_object("my_df", undefined_msg = msg, incorrect_msg = msg)
+test_object("my_list",
+            incorrect_msg = "Sepertinya `my_list` tidak berisi elemen-elemen yang benar. Pastikan Anda memasukkan variabel `my_vector`, `my_matrix`, dan `my_df` ke dalam fungsi `list()` secara berurutan, dipisah tanda koma.")
+success_msg("Hebat! Pergilah ke latihan berikutnya.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:89dd0126568b1ff5a84033c571907a8a282245e4
+## Membuat daftar bernama
+
+Ayo, Anda pasti bisa!
+
+Sama seperti daftar tugas, Anda tak ingin ada komponen yang tidak diketahui atau tidak dikenal pada daftar. Itulah sebabnya Anda harus menamai setiap komponen:
+
+```
+my_list <- list(name1 = your_comp1, 
+                name2 = your_comp2)
+``` 
+
+Kode ini menciptakan sebuah daftar berisi komponen bernama `name1`, `name2`, dan sebagainya. Jika Anda ingin menamai daftar setelah Anda membuatnya, gunakan fungsi `names()` seperti yang Anda lakukan dengan vektor. Perintah berikut ini sepenuhnya setara dengan tugas di atas:
+
+```
+my_list <- list(your_comp1, your_comp2)
+names(my_list) <- c("name1", "name2")
+```
+
+*** =instructions
+- Ganti kode latihan sebelumnya (lihat editor) dengan menambahkan nama-nama pada komponen. Namai `my_vector` dengan `vec`, `my_matrix` dengan `mat`, dan `my_df` dengan `df`.
+- Cetak `my_list` supaya Anda dapat memeriksa hasilnya.
+
+*** =hint
+Cara pertama untuk menamai komponen di dalam daftar adalah yang termudah. Dimulai seperti ini:
+```
+my_list <- list(vec = my_vector)
+```
+Tambahkan dua komponen lainnya dengan cara serupa.
+
+*** =pre_exercise_code
+```{r}
+# no pec
+```
+
+*** =sample_code
+```{r}
+# Vector with numerics from 1 up to 10
+my_vector <- 1:10 
+
+# Matrix with numerics from 1 up to 9
+my_matrix <- matrix(1:9, ncol = 3)
+
+# First 10 elements of the built-in data frame mtcars
+my_df <- mtcars[1:10,]
+
+# Adapt list() call to give the components names
+my_list <- list(my_vector, my_matrix, my_df)
+
+# Print out my_list
+
+```
+
+*** =solution
+```{r}
+# Vector with numerics from 1 up to 10
+my_vector <- 1:10 
+
+# Matrix with numerics from 1 up to 9
+my_matrix <- matrix(1:9, ncol = 3)
+
+# First 10 elements of the built-in data frame mtcars
+my_df <- mtcars[1:10,]
+
+# Adapt list() call to give the components names
+my_list <- list(vec = my_vector, mat = my_matrix, df = my_df)
+
+# Print out my_list
+my_list
+```
+
+*** =sct
+```{r}
+msg = "Jangan menghapus atau mengganti definisi variabel `my_vector`, `my_matrix`, atau `my_df`!"
+test_object("my_vector", undefined_msg = msg, incorrect_msg = msg)
+test_object("my_matrix", undefined_msg = msg, incorrect_msg = msg)
+test_object("my_df", undefined_msg = msg, incorrect_msg = msg)
+test_object("my_list",
+            incorrect_msg = "Sepertinya `my_list` tidak berisi elemen-elemen yang benar.")
+test_object("my_list", eq_condition = "equal",
+            incorrect_msg = "Sepertinya `my_list` tidak berisi penamaan komponen yang benar. Pastikan Anda menggunakan nama `vec`, `mat`, dan `df` secara berurutan. Lihat petunjuknya jika Anda kesulitan.");
+test_output_contains("my_list", incorrect_msg = "Jangan lupa untuk mencetak `my_list` ke konsol! Cukup tambahkan `my_list` pada baris baru di editor.")
+success_msg("Hebat! Anda bukan hanya paham cara membangun sebuah daftar, tetapi juga menamainya. Ini keahlian yang akan terbukti paling bermanfaat dalam latihan. Lanjutkan ke latihan berikutnya.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:19fd17cc792ef870c1558b3a9bae08c1d1e3acae
+## Membuat daftar nama (2)
+
+Sebagai penggemar berat film (ingat tugas Anda kemarin di LucasFilms), Anda memutuskan untuk mulai menyimpan informasi film-film bagus dengan bantuan daftar.
+
+Awali dengan membuat daftar untuk film "The Shining". Kami telah membuat variabel `mov`, `act`, dan` rev` di ruang kerja R. Silakan melihatnya di konsol.
+
+*** =instructions
+Lengkapi kode di sebelah kanan untuk membuat `shining_list`; ada tiga elemen di dalamnya:
+
+- moviename: string karakter berisi judul film (disimpan dalam `mov`)
+- actors: vektor berisi nama para aktor utama (disimpan dalam `act`)
+- reviews: frame data yang berisi sejumlah ulasan (disimpan dalam `rev`)
+
+Jangan lupa untuk menamai setiap komponen daftar dengan benar (yaitu moviename, actors, dan reviews).
+
+*** =hint
+`shining_list <- list(moviename = mov)` adalah sebagian jawabannya; tugas Anda yaitu menambahkan `act` dan` rev` ke dalam daftar dengan nama yang sesuai.
+
+*** =pre_exercise_code
+```{r}
+mov <- "The Shining"
+act      <- c("Jack Nicholson","Shelley Duvall","Danny Lloyd","Scatman Crothers","Barry Nelson")
+sources     <- c("IMDb1","IMDb2","IMDb3")
+comments    <- c("Best Horror Film I Have Ever Seen","A truly brilliant and scary film from Stanley Kubrick","A masterpiece of psychological horror")
+scores      <- c(4.5,4,5)
+rev     <- data.frame(scores, sources, comments)
+rm(scores, sources, comments)
+```
+
+*** =sample_code
+```{r}
+# The variables mov, act and rev are available
+
+# Finish the code to build shining_list
+shining_list <- list(moviename = mov)
+```
+
+*** =solution
+```{r}
+# The variables mov, act and rev are available
+
+# Finish the code to build shining_list
+shining_list <- list(moviename = mov, actors = act, reviews = rev)
+```
+
+*** =sct
+```{r}
+msg = "Jangan menghapus atau mengganti definisi variabel yang telah ditentukan sebelumnya!"
+lapply(c("mov", "rev", "act"), test_object, undefined_msg = msg, incorrect_msg = msg)
+test_object("shining_list",
+            incorrect_msg = "Sepertinya `shining_list` tidak berisi elemen yang benar. Elemen pertama yaitu `mov`, kedua adalah `act`, dan ketiga yaitu `rev`.")
+test_object("shining_list", eq_condition = "equal",
+            incorrect_msg = "Sepertinya `shining_list` tidak berisi penamaan komponen yang benar. Namai elemen pertama `moviename`, elemen kedua `actors`, dan elemen ketiga `reviews`.");
+success_msg("Hebat! Anda kini sudah tahu cara membangun dan menamai sebuah daftar. Sama seperti pada bab-bab sebelumnya, kita akan mencari tahu cara memilih elemen dari suatu daftar. Pergilah ke latihan berikutnya")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:1ef3278944562caef64b9927dd2ddb6ee52334cd
+## Memilih elemen dari daftar
+
+Sebuah daftar biasanya dibangun dari banyak elemen dan komponen. Oleh sebab itu, memperoleh satu elemen, banyak elemen, atau satu komponen dari sebuah daftar tidak selalu mudah.
+
+Salah satu cara untuk memilih sebuah komponen adalah menggunakan posisi bernomor komponen tersebut. Sebagai contoh, untuk "meraih" komponen pertama dari `shining_list`, tuliskan:
+
+```
+shining_list[[1]]
+```
+
+Cara cepat untuk memeriksa kode ini adalah dengan mengetiknya di konsol. Penting untuk diingat bahwa untuk memilih elemen suatu vektor, gunakan kurung siku tunggal: `[ ]`. Jangan sampai terbalik, ya!
+
+Anda juga bisa mengacu ke nama-nama komponen menggunakan `[[ ]]` atau tanda `$`. Keduanya sama-sama memilih frame data yang mewakili ulasan:
+
+```
+shining_list[["reviews"]]
+shining_list$reviews
+``` 
+
+Selain memilih komponen, Anda biasanya harus memilih elemen tertentu dari komponen-komponen ini. Sebagai contoh, `shining_list[[2]][1]` artinya memilih dari komponen kedua, `actors` (`shining_list[[2]]`), elemen pertama (`[1]`). Saat Anda mengetik ini di konsol, jawaban Jack Nicholson akan muncul.
+
+*** =instructions
+- Pilih dari `shining_list` vektor yang mewakili para aktor. Cetak vektor ini.
+- Pilih dari `shining_list` elemen kedua di dalam vektor yang mewakili para aktor. Cetak seperti sebelumnya.
+
+*** =hint
+- Anda dapat menggunakan `$actors` untuk memilih vektor yang mewakili para aktor.
+- Anda menggunakan `shining_list$actors[3]` untuk memilih elemen ketiga dalam vektor yang mewakili para aktor. Apa yang harus diganti untuk memilih elemen kedua?
+
+*** =pre_exercise_code
+```{r}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/shining_list.RData"))
+```
+
+*** =sample_code
+```{r}
+# shining_list is already pre-loaded in the workspace
+
+# Print out the vector representing the actors
+
+
+# Print the second element of the vector representing the actors
+
+```
+
+*** =solution
+```{r}
+# shining_list is already pre-loaded in the workspace
+
+# Print out the vector representing the actors
+shining_list$actors
+
+# Print the second element of the vector representing the actors
+shining_list$actors[2]
+```
+
+*** =sct
+```{r}
+msg <- "Jangan menghapus atau mengganti definisi `shining_list` yang sudah dimuat di ruang kerja!"
+test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
+test_output_contains("shining_list$actors", incorrect_msg = "Sudahkah Anda memilih dan mencetak vektor dengan benar yang mewakili para aktor? Anda bisa menggunakan `shining_list$actors`, misalnya.")
+test_output_contains("shining_list$actors[2]", incorrect_msg = "Untuk memilih aktor kedua dari vektor yang mewakili para aktor, rangkai seleksi Anda: `shining_list$actors` mewakili para aktor sehingga Anda dapat menambahkan `[2]`untuk memilih elemen kedua.")
+success_msg("Hebat! Memilih elemen dari daftar kelihatannya agak mudah, kan? Lanjutkan ke latihan berikutnya.")
+```
+
+
+--- type:NormalExercise xp:100 skills:1 key:ca3f7b71504ff93940cf65889d406a58c5b0019c
+## Menambahkan lebih banyak informasi film ke daftar
+
+Daftar perdana ini sudah Anda serahkan kepada para anggota klub hobi film Anda. Namun, salah seorang anggota senior klub itu mengatakan bahwa Anda lupa menambahkan informasi tahun rilis film. Karena Anda ingin sekali menjadi presiden klub tahun depan, Anda memutuskan untuk menambahkan informasi ini ke dalam daftar.
+
+Untuk menambahkan elemen ke suatu daftar secara mudah, gunakan fungsi [`c()`](http://www.rdocumentation.org/packages/base/functions/c) yang juga telah Anda gunakan untuk membangun vektor:
+
+```
+ext_list <- c(my_list , my_val)
+``` 
+
+Ini akan memperpanjang daftar mula-mula, `my_list`, dengan komponen `my_val`. Komponen baru ini ditambahkan ke ujung daftar.
+Jika Anda ingin menamai item baru tersebut pada daftar, cukup tambahkan nama seperti sebelumnya:
+
+```
+ext_list <- c(my_list, my_name = my_val)
+```
+
+*** =instructions
+- Lengkapi kode di bawah ini sehingga sebuah item bernama `year` ditambahkan ke `shining_list` dengan nilai 1980. Tetapkan hasilnya pada `shining_list_full`.
+- Terakhir, lihat struktur `shining_list_full` dengan fungsi [`str()`](http://www.rdocumentation.org/packages/utils/functions/str).
+
+*** =hint
+Lihat contoh kode dalam tugas latihan. Kode berikut mungkin bisa memudahkan Anda:
+```
+shining_list <- c(shining_list, ...)
+```
+Anda masih harus melengkapi titik-titik pada kode di atas.
+
+*** =pre_exercise_code
+```{r, eval = FALSE}
+load(url("http://s3.amazonaws.com/assets.datacamp.com/course/intro_to_r/shining_list.RData"))
+```
+
+*** =sample_code
+
+```{r}
+# shining_list, the list containing movie name, actors and reviews, is pre-loaded in the workspace
+
+# We forgot something; add the year to shining_list
+shining_list_full <- 
+
+# Have a look at shining_list_full
+
+```
+
+*** =solution
+
+```{r}
+# shining_list, the list containing movie name, actors and reviews, is pre-loaded in the workspace
+
+# Use c() to add a year to shining_list
+shining_list_full <- c(shining_list, year = 1980)
+
+# Have a look at shining_list_full
+str(shining_list_full)
+```
+
+*** =sct
+```{r}
+msg = "Jangan menghapus atau mengganti definisi `shining_list` yang sudah dimuat di ruang kerja!"
+test_object("shining_list", undefined_msg = msg, incorrect_msg = msg)
+test_object("shining_list_full", eq_condition = "equal",
+            incorrect_msg = paste("Sudahkah Anda memperpanjang 'shining_list` dengan elemen bernama `year`",
+                                   "yang nilainya 1980? Anda bisa menggunakan `c(shining_list, year = 1980)`"))
+test_function("str", "object", incorrect_msg = "Jangan lupa untuk menampilkan struktur `shining_list_full` dengan `str()`.")
+success_msg("Luar biasa! Inilah latihan terakhir Anda pada daftar! Sekarang Anda sudah memiliki fondasi dalam bahasa pemrograman R. Masih ada banyak hal yang harus dipelajari. Lihat semua kursus lain di DataCamp dan jadilah pakar sains data sejati!")
+```
+
+
