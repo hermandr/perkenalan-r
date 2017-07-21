@@ -1,6 +1,6 @@
 --- 
 title_meta  : Bab 6
-title       : `list`
+title       : List
 description : Berlawanan dengan vektor, `list` dapat menampung komponen-komponen tipenya berbeda, mirip seperti daftar tugas di rumah atau di kantor. Bab ini akan mengajari Anda cara membuat, menamai, dan mengolah subset `list`.
 
 --- type:NormalExercise xp:100 skills:1 key:2afcdb6a76ec91bf266de9b2ac295d844d7bb004
