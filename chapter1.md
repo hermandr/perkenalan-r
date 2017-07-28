@@ -1,6 +1,6 @@
 --- 
 title_meta  : Bab 1
-title       : Pengenalan dasar-dasar
+title       : Pengenalan dasar
 description : "Pada bab ini, Anda akan menjalankan langkah-langkah pertama dengan R. Anda akan belajar cara memakai konsol sebagai kalkulator dan juga cara menetapkan variabel. Anda juga akan mengenal tipe-tipe data dasar di R. Ayo kita mulai!"
 
 --- type:NormalExercise xp:100 skills:1 key:15d729634a
