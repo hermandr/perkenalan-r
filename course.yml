@@ -1,6 +1,8 @@
 title            : Belajar R
 author_field     : Herman Tan
 author_bio       : Herman has a strong interest in data science and is an instructor.  He strongly believes that anyone can learn programming, and everyone should give it a try! 
+instructors      :
+  - herman@redcubesg.com
 university       : DataCamp
 difficulty_level : 1
 time_needed      : 2 hours
